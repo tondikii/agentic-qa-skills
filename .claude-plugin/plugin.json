@@ -1,0 +1,27 @@
+{
+  "name": "agentic-qa-skills",
+  "version": "0.1.0",
+  "description": "Harness-agnostic skills for agentic browser testing: persona-scoped exploration, flow approval, Gherkin scenarios, live execution, and spreadsheet reports.",
+  "author": {
+    "name": "tondikii",
+    "url": "https://github.com/tondikii/agentic-qa-skills"
+  },
+  "homepage": "https://github.com/tondikii/agentic-qa-skills",
+  "repository": "https://github.com/tondikii/agentic-qa-skills",
+  "license": "MIT",
+  "keywords": [
+    "qa",
+    "testing",
+    "playwright",
+    "bdd",
+    "gherkin",
+    "agentic-testing"
+  ],
+  "skills": [
+    "./skills/qa-explore",
+    "./skills/qa-to-flows",
+    "./skills/qa-to-scenario",
+    "./skills/qa-execute",
+    "./skills/qa-to-sheets"
+  ]
+}

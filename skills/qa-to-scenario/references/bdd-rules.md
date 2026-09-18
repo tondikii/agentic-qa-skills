@@ -9,4 +9,4 @@ Apply to every scenario before finishing:
 - [ ] ID rendered as `@TAG` directly above the `Scenario:` line, plus `@<suite>`.
 - [ ] `Then` states an observable expectation.
 
-Run `python tools/bddcheck.py <scope>.scenario.md` to verify mechanically.
+Run the bundled validator (`scripts/bddcheck.py <scope>.scenario.md`) to verify mechanically.

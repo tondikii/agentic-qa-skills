@@ -1,26 +1,26 @@
 # Skill convention
 
-Every skill in this suite lives in its own folder at the repo root and follows the same shape so skills install cleanly on any harness.
+Every skill in this suite lives in its own folder under `skills/` and follows the same shape so skills install cleanly on any harness.
 
 ## Folder shape
 
 ```
-qa-<name>/
-├── SKILL.md            ← the skill prompt (entry point)
-└── references/         ← supporting files the prompt points at
-    ├── <topic>.md      ← templates, schemas, checklists
-    └── ...
+skills/qa-<name>/
+├── SKILL.md            ← the skill prompt (entry point, with name/description frontmatter)
+├── references/         ← supporting files the prompt points at (templates, checklists)
+└── scripts/            ← helper scripts the skill runs (validators, converters)
 ```
 
-Shared tooling lives in `tools/` at the repo root. Worked examples live in `examples/`.
+Shared tooling also lives in `tools/` at the repo root, and worked examples in `examples/`. Skills never depend on repo-root paths: every template and script a skill needs is bundled inside its own folder so installer copies stay self-contained.
 
 ## SKILL.md structure
 
-1. Name and one-line purpose.
-2. Inputs (required and optional, with defaults).
-3. Process (numbered steps the agent follows in order).
-4. Outputs (which files are written or updated, and how).
-5. Rules (hard constraints: verification over guessing, no secrets in markdown, refusal conditions).
+1. YAML frontmatter with `name` and `description` (required by the Agent Skills spec and the `skills` installer).
+2. Name and one-line purpose.
+3. Inputs (required and optional, with defaults).
+4. Process (numbered steps the agent follows in order).
+5. Outputs (which files are written or updated, and how).
+6. Rules (hard constraints: verification over guessing, no secrets in markdown, refusal conditions).
 
 ## Rules for all skills
 

@@ -1,3 +1,8 @@
+---
+name: qa-execute
+description: "Run selected scenarios live through playwright-cli and write status, execution time, and report updates back into the markdown."
+---
+
 # qa-execute
 
 Run selected scenarios live through `playwright-cli` and write results back into the markdown.
